@@ -1,6 +1,3 @@
-// src/app/blog/page.tsx
-// ブログ一覧ページ
-
 import { getAllPosts } from '@/lib/blog'
 import BlogRow from '@/components/BlogRow'
 
@@ -16,7 +13,7 @@ export default async function BlogPage() {
 
       {posts.length === 0 ? (
         <p className="font-mono text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>
-          記事がまだありません。content/blog/ にMarkdownファイルを追加してね。
+          記事がまだありません。
         </p>
       ) : (
         <div className="flex flex-col gap-2">

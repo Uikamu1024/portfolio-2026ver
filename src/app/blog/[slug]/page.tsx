@@ -1,12 +1,7 @@
-// src/app/blog/[slug]/page.tsx
-// ブログ記事の詳細ページ（動的ルーティング）
-// [slug] の部分がURLになる → /blog/hello-world など
-
 import { getAllPosts, getPost } from '@/lib/blog'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from 'next/link'
 
-// 静的生成のためのパス一覧を返す
 export async function generateStaticParams() {
   const posts = await getAllPosts()
   return posts.map((p) => ({ slug: p.slug }))
@@ -15,13 +10,13 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const post = await getPost(params.slug)
+  const { slug } = await params
+  const post = await getPost(slug)
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-16 animate-fade-in">
-      {/* 戻るリンク */}
       <Link
         href="/blog"
         className="font-mono text-xs tracking-widest mb-8 inline-block transition-colors hover:opacity-70"
@@ -30,7 +25,6 @@ export default async function BlogPostPage({
         ← blog 一覧に戻る
       </Link>
 
-      {/* メタ情報 */}
       <div className="mb-2">
         <span className="font-mono text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
           {post.date}
@@ -39,7 +33,6 @@ export default async function BlogPostPage({
 
       <h1 className="text-3xl font-extrabold text-white mb-4">{post.title}</h1>
 
-      {/* タグ */}
       {post.tags.length > 0 && (
         <div className="flex flex-wrap gap-2 mb-10">
           {post.tags.map((tag) => (
@@ -58,7 +51,6 @@ export default async function BlogPostPage({
         </div>
       )}
 
-      {/* 本文（Markdownレンダリング） */}
       <div className="prose-dark">
         <MDXRemote source={post.content} />
       </div>
