@@ -40,5 +40,7 @@ export const works: Work[] = [
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     
 
-  }
+  },
+
+
 ]
