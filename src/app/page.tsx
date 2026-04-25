@@ -29,7 +29,7 @@ export default async function Home() {
             className="inline-block w-2 h-2 rounded-full animate-blink"
             style={{ background: '#67e8f9' }}
           />
-          available for internship
+          currently studying
         </div>
 
         <h1
