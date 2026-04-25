@@ -21,14 +21,14 @@ export default function AboutPage() {
       <div
         className="glass-card rounded-xl p-6 mb-8"
       >
-        <h2 className="font-bold text-white text-lg mb-1">uikaむ</h2>
+        <h2 className="font-bold text-white text-lg mb-1">uikamu</h2>
         <p className="font-mono text-xs mb-4" style={{ color: '#67e8f9' }}>
           Student Engineer · Kyoto
         </p>
         <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9' }}>
           {/* ★ここを自分の紹介文に変えてね */}
           京都の大学でWebとAIを学ぶ学生エンジニア。
-          Webデザインコンテストで受賞経験があり、チームでのWebアプリ開発も経験済み。
+          Webデザインコンテストで受賞経験があり、チームでのWebアプリ開発も経験したが、それ以降３年ほどプログラミングをしておらず、知識が抜けてしまった。
           現在はPythonを中心に学習しながら、TypeScript・Reactへの移行を計画中。
           医療AI・Webサービス・データサイエンスに興味がある。
         </p>
@@ -67,9 +67,9 @@ export default function AboutPage() {
       </p>
       <div className="flex flex-col gap-3">
         {[
-          { date: '2025', event: 'AIハッカソン参加予定' },
-          { date: '2024', event: 'LaravelでQ&Aサービスをチーム開発' },
-          { date: '2023', event: 'Webデザインコンテスト受賞' },
+          { date: '2026', event: 'AIハッカソン参加予定' },
+          { date: '2024', event: 'Webデザインコンテスト受賞' },
+          { date: '2021', event: 'LaravelでQ&Aサービスをチーム開発' },
         ].map(({ date, event }) => (
           <div key={date} className="flex gap-4 items-start">
             <span className="font-mono text-xs pt-0.5 w-12 shrink-0" style={{ color: '#67e8f9' }}>

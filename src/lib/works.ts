@@ -29,9 +29,16 @@ export const works: Work[] = [
   },
   {
     id: 3,
-    title: 'AI Hackathon',
-    subtitle: 'Coming soon...',
-    tags: ['Python', 'AI'],
-    description: '準備中',
+    title: 'Line Bot',
+    subtitle: '毎日の天気、ITニュース、おみくじを配信',
+    tags: ['Python', 'API'],
+    description: 'Line Botを作成し、天気予報やITニュース、おみくじを配信するサービス。',
   },
+  {id :4,
+    title: 'Portfolio Site',
+    subtitle: 'このサイト！',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    
+
+  }
 ]

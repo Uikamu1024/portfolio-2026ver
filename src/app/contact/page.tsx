@@ -3,9 +3,9 @@
 // ★SNSのリンクをここで変えてね
 
 const links = [
-  { label: 'GitHub', handle: '@your-github', url: 'https://github.com/your-github' },
-  { label: 'Twitter / X', handle: '@your-twitter', url: 'https://twitter.com/your-twitter' },
-  { label: 'Email', handle: 'hello@example.com', url: 'mailto:hello@example.com' },
+  //{ label: 'GitHub', handle: '@your-github', url: 'https://github.com/your-github' },
+  { label: 'Twitter / X', handle: '@Uikamuu', url: 'https://twitter.com/Uikamuu' },
+  //{ label: 'Email', handle: 'hello@example.com', url: 'mailto:hello@example.com' },
 ]
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
       </p>
       <h1 className="text-3xl font-extrabold text-white mb-4">連絡先</h1>
       <p className="text-sm mb-10" style={{ color: 'rgba(255,255,255,0.5)', lineHeight: '1.8' }}>
-        インターンシップや共同開発のお誘い、お気軽にどうぞ。
+        ぜひお話しをしましょう
       </p>
 
       <div className="flex flex-col gap-3">

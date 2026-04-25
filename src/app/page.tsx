@@ -9,7 +9,12 @@ import WorkCard from '@/components/WorkCard'
 import BlogRow from '@/components/BlogRow'
 
 export default async function Home() {
-  const latestPosts = await getLatestPosts(3)
+  const allLatestPosts = await getLatestPosts(4)
+  const featuredPosts = allLatestPosts.slice(0, 3)
+  const hasMorePosts = allLatestPosts.length > 3
+
+  const featuredWorks = works.slice(0, 4)
+  const hasMoreWorks = works.length > 4
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16 animate-fade-in">
@@ -46,7 +51,7 @@ export default async function Home() {
 
         <p className="text-base mb-8 max-w-lg" style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.9' }}>
           AIに仕事を取られそうな世の中でも
-          負けずに頑張るエンジニアを目指す！
+          負けずにエンジニアを目指す！
         </p>
 
         <div className="flex gap-3 flex-wrap">
@@ -85,10 +90,21 @@ export default async function Home() {
           // featured works
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {works.map((work) => (
+          {featuredWorks.map((work) => (
             <WorkCard key={work.id} work={work} />
           ))}
         </div>
+        {hasMoreWorks && (
+          <div className="mt-4">
+            <Link
+              href="/works"
+              className="font-mono text-xs tracking-widest transition-colors"
+              style={{ color: 'rgba(165,180,252,0.6)' }}
+            >
+              すべての成果を見る →
+            </Link>
+          </div>
+        )}
       </section>
 
       {/* ─── Blog ─── */}
@@ -97,19 +113,21 @@ export default async function Home() {
           // recent posts
         </p>
         <div className="flex flex-col gap-2">
-          {latestPosts.map((post) => (
+          {featuredPosts.map((post) => (
             <BlogRow key={post.slug} post={post} />
           ))}
         </div>
-        <div className="mt-4">
-          <Link
-            href="/blog"
-            className="font-mono text-xs tracking-widest transition-colors"
-            style={{ color: 'rgba(165,180,252,0.6)' }}
-          >
-            すべての記事を見る →
-          </Link>
-        </div>
+        {hasMorePosts && (
+          <div className="mt-4">
+            <Link
+              href="/blog"
+              className="font-mono text-xs tracking-widest transition-colors"
+              style={{ color: 'rgba(165,180,252,0.6)' }}
+            >
+              すべての記事を見る →
+            </Link>
+          </div>
+        )}
       </section>
     </div>
   )

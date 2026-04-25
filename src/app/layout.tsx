@@ -4,7 +4,7 @@ import Nav from '@/components/Nav'
 import Background from '@/components/Background'
 
 export const metadata: Metadata = {
-  title: 'uikaむ | Portfolio',
+  title: 'uikamu | Portfolio',
   description: 'Student Engineer & Designer based in Kyoto',
 }
 
