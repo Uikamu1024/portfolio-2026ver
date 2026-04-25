@@ -8,15 +8,15 @@ import { useEffect, useState } from 'react'
 // ここを編集してスキルや情報を変更できます
 const lines = [
   { type: 'cmd', text: 'whoami' },
-  { type: 'out', text: 'student engineer · web designer · ai enthusiast' },
+  { type: 'out', text: 'student engineer · ai enthusiast' },
   { type: 'cmd', text: 'skills --list' },
-  { type: 'out', text: 'HTML · CSS · Python · Laravel · UI Design' },
+  { type: 'out', text: 'Studying Python' },
   { type: 'cmd', text: 'next --learning' },
   { type: 'out', text: 'TypeScript · React · Next.js · Machine Learning' },
   { type: 'cmd', text: 'awards' },
-  { type: 'out', text: '★ Web Design Contest Winner' },
-  { type: 'cmd', text: 'status' },
-  { type: 'out', text: 'seeking internship opportunities in Kyoto / Remote' },
+  { type: 'out', text: '★ Web Create Contest Winner' },
+  
+  
 ]
 
 export default function Terminal() {

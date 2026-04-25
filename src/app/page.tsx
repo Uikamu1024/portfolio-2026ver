@@ -36,17 +36,17 @@ export default async function Home() {
           className="text-5xl font-extrabold leading-tight mb-2"
           style={{ fontFamily: 'var(--font-display)' }}
         >
-          Engineer &<br />
-          <span className="gradient-text">Designer.</span>
+          Future<br />
+              <span className="gradient-text">Engineer.</span>
         </h1>
 
         <p className="font-mono text-sm mb-6" style={{ color: 'rgba(255,255,255,0.35)' }}>
-          // student developer · kyoto
+          // student developer · in kyoto
         </p>
 
         <p className="text-base mb-8 max-w-lg" style={{ color: 'rgba(255,255,255,0.55)', lineHeight: '1.9' }}>
-          WebとAIの交差点で、デザインと技術を掛け合わせた
-          プロダクトをつくる学生エンジニア。
+          AIに仕事を取られそうな世の中でも
+          負けずに頑張るエンジニアを目指す！
         </p>
 
         <div className="flex gap-3 flex-wrap">
