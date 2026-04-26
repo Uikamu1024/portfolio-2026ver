@@ -7,7 +7,7 @@ export default function AboutPage() {
     { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript'] },
     { category: 'Backend', items: ['PHP', 'Laravel', 'MySQL'] },
     { category: 'Learning', items: ['Python', 'TypeScript', 'React', 'Next.js'] },
-    { category: 'Design', items: ['Figma', 'UI Design', 'Web Design'] },
+    //{ category: 'Design', items: ['Figma', 'UI Design', 'Web Design'] },
   ]
 
   return (
@@ -23,7 +23,7 @@ export default function AboutPage() {
       >
         <h2 className="font-bold text-white text-lg mb-1">uikamu</h2>
         <p className="font-mono text-xs mb-4" style={{ color: '#67e8f9' }}>
-          Student Engineer · Kyoto
+          Incompetent Student Engineer · Kyoto
         </p>
         <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.9' }}>
           {/* ★ここを自分の紹介文に変えてね */}
